@@ -1,0 +1,47 @@
+table {  
+    border-collapse: collapse;  
+}
+  
+.inline{   
+    display: inline-block;   
+    float: right;   
+    margin: 20px 0px;   
+}   
+    
+button{   
+    height: 34px;   
+}   
+
+.pagination {   
+    display: inline-block;   
+}   
+.pagination a {   
+    font-weight: bold;   
+    font-size: 13px;   
+    color: #2980B9;   
+    float: left;   
+    padding: 8px 16px;   
+    text-decoration: none;   
+    border: 1px solid #2980B9;   
+}   
+.pagination a.active {   
+    background-color: #3498DB;   
+    color: white;
+}   
+.pagination a:hover:not(.active) {   
+    background-color: skyblue;   
+}
+
+.mobile_screens {
+    display: none;
+}
+
+@media (min-width: 1px) and (max-width: 960px) {
+    .larger_screens {
+        display: none;
+    }
+
+    .mobile_screens {
+        display: block;
+    }
+}

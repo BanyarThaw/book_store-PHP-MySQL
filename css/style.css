@@ -1,0 +1,624 @@
+/*
+  flow
+  ----------
+  large->medium->small  
+*/
+
+/* larger screens */
+html {
+  background: #34495E;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 900px; 
+  background: #e5e5e5;
+  border: 4px solid #3498DB;
+  margin: 20px auto;
+}
+
+h1 {
+  padding: 10px;
+  font-size: 21px;
+  background: #3498DB;
+  margin: 0;
+  color: #fff;
+}
+
+a {
+  color: #2980B9;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3498DB;
+}
+
+.info {
+  background: #2980B9;
+  padding: 8px;
+  text-align: right;
+}
+
+.info a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  border-bottom: 1px dotted #fff;
+}
+
+.info a:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.menu {
+  display: none;
+  margin-top: 5%;
+  margin-left: 3%;
+}
+
+.menu a button {
+  border: 1px solid black;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.menu_icon {
+  background: transparent url(../images/categories.png) no-repeat center center;
+}
+
+.clear_cart {
+  background: transparent url(../images/archeology.png) no-repeat center center;
+}
+
+.home {
+  background: transparent url(../images/home.png) no-repeat center center;
+}
+
+.sidebar {
+  float: left;
+  width: 26%;
+}
+
+.menu_sidebar {
+  float: left;
+  width: 100%;
+}
+
+.cats {
+  list-style: none;
+  padding: 0;
+}
+
+.cats li a {
+  display: block;
+  font-size: 15px;
+  padding: 8px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.cats li a:hover {
+  background: #efefef;
+}
+
+.main {
+  float: right;
+  width: 74%; 
+  background: #fff;
+}
+
+.books {
+  list-style: none;
+  margin: 15px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.books li {
+  width: 190px;
+  text-align: center;
+  height: 240px;
+  float: left;
+  margin: 20px 10px;
+  font-size: 15px;
+}
+
+.books b {
+  display: block;
+  margin: 5px 0;
+  font-weight: normal;
+}
+
+.books i {
+  color: #E74C3C;
+}
+
+.book_image {
+  height: 150px;
+}
+
+a.add-to-cart {
+  font-size: 13px;
+  display: block;
+  background: #1ABC9C;
+  color: #fff;
+  padding: 5px 0;
+  margin: 5px 30px;
+}
+
+a.del {
+  color: #D35400;
+}
+
+.footer {
+  clear: both;
+  background: #95A5A6;
+  color: #fff;
+  font-size: 13px;
+  padding: 8px;
+  text-align: center;
+  border-top: 1px solid #7F8C8D;
+}
+
+.detail {
+  padding: 20px;
+  background: #fff;
+}
+
+.detail .back {
+  float: right;
+}
+
+.detail a.add-to-cart {
+  margin: 0;
+  width: 160px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+table {
+  margin: 20px;
+  border-spacing: 1px; 
+  background: #16A085; 
+} 
+
+td { 
+  background: white; 
+  border-collapse: collapse; 
+  padding: 8px;
+} 
+
+th { 
+  color: white;
+  padding: 8px; 
+}
+
+
+.order-form {
+  margin: 20px;
+}
+
+.order-form h2 {
+  margin: 40px 0 10px 0;
+  padding: 0 0 5px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 18px;
+  color: #C0392B;
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+  color: #555;
+}
+
+input[type=text],
+input[type=password],
+textarea,
+select {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid #ddd;
+  padding: 6px;
+  width: 300px;
+  background: #fff;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type=submit] {
+  padding: 10px 24px;
+  margin-right: 10px;
+}
+
+.msg {
+  background: #1ABC9C;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin: 50px 20px;
+}
+
+.msg a {
+  color: #eee;
+  border-bottom: 1px dotted #fff;
+}
+
+label.error {
+	color: #900;
+	font-size: 13px;
+	font-style: italic;
+	margin-top: -1px;
+}
+
+.search {
+	margin-top: 20px;
+}
+
+.search input[type=text] {
+	width: 180px;
+	margin-left: 8px;
+}
+
+.search input[type=submit] {
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+	background: transparent url(../images/search.png) no-repeat center center;
+	border: 0 none;
+	padding: 0;
+	margin: 0 0 0 -5px;
+}
+
+.book_image_detail_parent {
+  width: 40%;
+}
+
+.book_image_detail {
+  width: 100%;
+}
+
+/* medium screens */
+@media (min-width: 481px) and (max-width: 960px) {
+  body {
+    width: 80%;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .books li {
+    width: 130px;
+    text-align: center;
+    height: 240px;
+    float: left;
+    margin: 20px 20px;
+    font-size: 15px;
+  }
+
+  .book_image {
+    height: 150px;
+  }
+
+  .book_image_detail_parent {
+    width: 30%;
+  }
+
+  .book_image_detail {
+    width: 100%;
+  }
+}
+
+/* mobile screens */
+@media (min-width: 1px) and (max-width: 480px) {
+  body {
+    width: 90%;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .books {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .books li {
+    width: auto;
+    text-align: center;
+    height: auto;
+    float: none;
+    font-size: 15px;
+    margin-bottom: 65px;
+  }
+
+  .book_image {
+    width: 100%;
+    height: auto;
+  }
+
+  .book_image_detail_parent {
+    width: 100%;
+  }
+
+  .book_image_detail {
+    width: 100%;
+  }
+
+  table {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  input[type=text],
+  input[type=password],
+  textarea,
+  select {
+    width: 85%;
+  }
+
+  .mobile_screens {
+    margin-top: -50px;
+  }
+}
+
+
+/* special case (for medium screens responsive) */
+/* you can solve this problem by using bootstarp columns and div */
+/* 960px (medium screen end point) */
+/* 480px (medium screen start point) */
+/* change main color to white */
+@media (min-width: 900px) and (max-width: 960px) {
+  body {
+    background: #fff;
+  }
+
+  .main {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .books {
+    margin-left: 5%;
+    margin-right: 3%;
+  }
+}
+
+@media(min-width: 850px) and (max-width: 899px) {
+  body {
+    background: #fff;
+  }
+
+  .main {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .books {
+    margin-left: 7%;
+    margin-right: 3%;
+  }
+}
+
+@media(min-width: 830px) and (max-width: 849px) {
+  body {
+    background: #fff;
+  }
+
+  .main {
+    width: 86%;
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+
+  .books {
+    margin-left: 5%;
+    margin-right: 3%;
+  }
+}
+
+@media(min-width: 800px) and (max-width: 829px) {
+  body {
+    background: #fff;
+  }
+
+  .main {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .books {
+    margin-left: 7%;
+    margin-right: 0;
+  }
+}
+
+@media(min-width: 788px) and (max-width: 799px) {
+  body {
+    background: #fff;
+  }
+
+  .main {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .books {
+    margin-left: 3%;
+    margin-right: 5%;
+  }
+}
+@media(min-width: 750px) and (max-width: 787px) {
+  body {
+    background: #fff;
+  }
+
+  .main {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .books {
+    margin-left: 6%;
+    margin-right: 7%;
+  }
+
+  .books li {
+    width: 160px;
+  }
+}
+
+@media(min-width: 700px) and (max-width: 750px) {
+  body {
+    background: #fff;
+  }
+
+  .main {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .books {
+    margin-left: 3%;
+    margin-right: 5%;
+  }
+
+  .books li {
+    width: 160px;
+  }
+}
+
+@media(min-width: 630px) and (max-width: 699px) {
+  body {
+    background: #fff;
+  }
+
+  .main {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .books {
+    margin-left: 3%;
+    margin-right: 0;
+  }
+
+  .books li {
+    width: 170px;
+  }
+}
+
+@media(min-width: 590px) and (max-width: 629px) {
+  body {
+    background: #fff;
+  }
+
+  .main {
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .books {
+    margin-left: 3%;
+    margin-right: 0;
+  }
+
+  .books li {
+    width: 170px;
+  }
+}
+
+@media(min-width: 565px) and (max-width: 589px) {
+  body {
+    background: #fff;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .books {
+    margin-left: 3%;
+    margin-right: 0;
+  }
+
+  .books li {
+    width: 170px;
+  }
+}
+
+@media(min-width: 540px) and (max-width: 564px) {
+  body {
+    background: #fff;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .books {
+    margin-left: 4%;
+    margin-right: 0;
+  }
+
+  .books li {
+    width: 160px;
+  }
+}
+
+@media(min-width: 479px) and (max-width: 539px) {
+  body {
+    background: #fff;
+  }
+  
+  .main {
+    width: 100%;
+  }
+
+  .books {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .books li {
+    width: auto;
+    text-align: center;
+    height: auto;
+    float: none;
+    font-size: 15px;
+    margin-bottom: 65px;
+  }
+
+  .book_image {
+    width: 100%;
+    height: auto;
+  }
+}
