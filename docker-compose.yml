@@ -1,0 +1,35 @@
+version: '3'
+
+networks:
+  php-bookstore:
+
+services:
+  php_apache:
+    build:
+      context: ./dockerfiles
+      dockerfile: php_apache.dockerfile
+    container_name: php_apache-bookstore
+    volumes:
+      - "./:/var/www/html" # sync project dir with container web dir
+    ports:
+      - 80:80
+      - 443:443 # for future ssl traffic
+    depends_on:
+      - mysql
+    networks:
+      - php-bookstore
+
+  mysql:
+    build:
+      context: ./dockerfiles
+      dockerfile: mysql.dockerfile
+    container_name: mysql-bookstore
+    environment:
+      - MYSQL_DATABASE=store
+      - MYSQL_USER=store_admin
+      - MYSQL_PASSWORD=password # this should live in a env var
+      - MYSQL_ALLOW_EMPTY_PASSWORD=1 # equivalent to True
+    volumes:
+      - "./db:/docker-entrypoint-initdb.d" # sync persistent sql files with container
+    networks:
+      - php-bookstore

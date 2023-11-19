@@ -1,3 +1,11 @@
+<?php
+  include("confs/auth.php");
+  include("confs/config.php");
+
+  $id = $_GET['id'];
+  $result = mysqli_query($conn, "SELECT * FROM books WHERE id = $id");
+  $row = mysqli_fetch_assoc($result);
+?>
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
@@ -7,15 +15,6 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<?php
-  include("confs/auth.php");
-  include("confs/config.php");
-
-  $id = $_GET['id'];
-  $result = mysqli_query($conn, "SELECT * FROM books WHERE id = $id");
-  $row = mysqli_fetch_assoc($result);
-?>
-
 <h1>Edit Book</h1>
 <form action="book-update.php" method="post" enctype="multipart/form-data">
   <input type="hidden" name="id" value="<?php echo $row['id'] ?>">

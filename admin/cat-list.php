@@ -1,3 +1,9 @@
+<?php
+	include("confs/auth.php");
+	include("confs/config.php");
+	$result = mysqli_query($conn, "SELECT * FROM categories");
+?>
+
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
@@ -26,12 +32,6 @@
     <a href="logout.php" class="logout_icon"></a>
   </li>
 </ul>
-
-<?php
-	include("confs/auth.php");
-	include("confs/config.php");
-	$result = mysqli_query($conn, "SELECT * FROM categories");
-?>
 
 <ul class="list">
 	<?php while($row = mysqli_fetch_assoc($result)): ?>

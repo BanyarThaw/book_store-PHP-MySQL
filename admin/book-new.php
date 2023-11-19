@@ -1,3 +1,9 @@
+<?php
+  include("confs/auth.php");
+  include("confs/config.php");
+  $result = mysqli_query($conn, "SELECT id, name FROM categories");
+?>
+
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
@@ -25,9 +31,6 @@
   <select name="category_id" id="categories">
     <option value="">-- Choose --</option>
     <?php
-      include("confs/auth.php");
-      include("confs/config.php");
-      $result = mysqli_query($conn, "SELECT id, name FROM categories");
       while($row = mysqli_fetch_assoc($result)):
     ?>
     <option value="<?php echo $row['id'] ?>">
