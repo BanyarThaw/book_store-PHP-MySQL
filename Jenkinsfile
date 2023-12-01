@@ -21,7 +21,7 @@ pipeline {
         }   
         stage("Go to project directory") {
             steps {
-                sh 'cd "/var/www/html/book_store-PHP-MySQL"'
+                sh 'sudo cd "/var/www/html/book_store-PHP-MySQL"'
             }
         }
         stage("Git pull branch") {
