@@ -74,7 +74,7 @@
   <link rel="stylesheet" href="css/pagination.css">
 </head>
 <body>
-  <h1 id="title">Book Store</h1>
+  <h1 id="title">Book Store Update</h1>
 
   <div class="info">
     <a href="view-cart.php?page=<?php echo $page; ?>&&cat=<?php echo $cat; ?>">
