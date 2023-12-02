@@ -31,7 +31,7 @@ pipeline {
                 sshagent(credentials: ['awslightsail']) {
                     sh 'ssh -o StrictHostKeyChecking=no ubuntu@54.255.246.163 cd projects/book_store-PHP-MySQL'
                     sh 'ls'
-                    sh 'sudo git pull origin main'
+                    sh 'git pull origin main'
                 }
             }
         }
