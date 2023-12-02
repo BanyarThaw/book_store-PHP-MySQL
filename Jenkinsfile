@@ -19,20 +19,18 @@ pipeline {
                 '''
             }
         }   
-        stage("Testing") {
-            steps {
-                sh '''
-                    pwd
-                '''
-            }
-        }
-        // stage("Go to project directory") {
+        // stage("Testing") {
         //     steps {
         //         sh '''
-        //             cd "projects/book_store-PHP-MySQL"
+        //             pwd
         //         '''
         //     }
         // }
+        stage("Go to project directory") {
+            steps {
+                sh 'ssh -o StrictHostKeyChecking=no ubuntu@13.212.23.156 cd projects/book_store-PHP-MySQL'
+            }
+        }
         // stage("Git pull branch") {
         //     steps {
         //         sh '''
