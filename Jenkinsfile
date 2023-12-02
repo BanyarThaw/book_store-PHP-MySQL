@@ -29,10 +29,7 @@ pipeline {
         stage("Go to project directory") {
             steps {
                 sshagent(credentials: ['awslightsail']) {
-                    sh 'ssh -o StrictHostKeyChecking=no ubuntu@54.255.246.163 cd projects/book_store-PHP-MySQL'
-                    sh 'ssh -o StrictHostKeyChecking=no ubuntu@54.255.246.163 pwd'
-                    sh 'ssh -o StrictHostKeyChecking=no ubuntu@54.255.246.163 ls'
-                    sh 'ssh -o StrictHostKeyChecking=no ubuntu@54.255.246.163 sudo git pull origin dev_branc_ubuntu'
+                    sh 'ssh -o StrictHostKeyChecking=no ubuntu@54.255.246.163 cd projects/book_store-PHP-MySQL && ls -l && echo "Hello, world!"'
                 }
             }
         }
