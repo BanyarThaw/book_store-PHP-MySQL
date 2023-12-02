@@ -19,26 +19,26 @@ pipeline {
                 '''
             }
         }   
-        // stage("Testing") {
+        stage("Testing") {
+            steps {
+                sh '''
+                    pwd
+                '''
+            }
+        }
+        // stage("Go to project directory") {
         //     steps {
         //         sh '''
-        //             echo "Hello Wrold"
+        //             cd "projects/book_store-PHP-MySQL"
         //         '''
         //     }
         // }
-        stage("Go to project directory") {
-            steps {
-                sh '''
-                    cd "projects/book_store-PHP-MySQL"
-                '''
-            }
-        }
-        stage("Git pull branch") {
-            steps {
-                sh '''
-                    git pull origin main
-                '''
-            }
-        }
+        // stage("Git pull branch") {
+        //     steps {
+        //         sh '''
+        //             git pull origin main
+        //         '''
+        //     }
+        // }
     }
 }
