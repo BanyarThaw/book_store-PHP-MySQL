@@ -28,7 +28,8 @@ pipeline {
         // }
         stage("Go to project directory") {
             steps {
-                sh 'ssh -o StrictHostKeyChecking=no ubuntu@13.212.23.156 cd projects/book_store-PHP-MySQL'
+                sh 'ssh -o StrictHostKeyChecking=no ubuntu@54.255.246.163 cd projects/book_store-PHP-MySQL'
+                sh 'ls'
             }
         }
         // stage("Git pull branch") {
