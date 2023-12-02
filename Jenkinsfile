@@ -21,7 +21,7 @@ pipeline {
         }   
         stage("Go to project directory") {
             steps {
-                sh 'cd "projects/book_store-PHP-MySQL"'
+                sh 'cd "~/projects/book_store-PHP-MySQL"'
             }
         }
         stage("Git pull branch") {
