@@ -30,9 +30,9 @@ pipeline {
             steps {
                 sshagent(credentials: ['awslightsail']) {
                     sh 'ssh -o StrictHostKeyChecking=no ubuntu@54.255.246.163 cd projects/book_store-PHP-MySQL'
-                    sh 'pwd'
-                    sh 'ls'
-                    sh 'sudo git pull origin dev_branc_ubuntu'
+                    sh 'ssh -o StrictHostKeyChecking=no ubuntu@54.255.246.163 pwd'
+                    sh 'ssh -o StrictHostKeyChecking=no ubuntu@54.255.246.163 ls'
+                    sh 'ssh -o StrictHostKeyChecking=no ubuntu@54.255.246.163 sudo git pull origin dev_branc_ubuntu'
                 }
             }
         }
