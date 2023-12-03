@@ -9,7 +9,7 @@ pipeline {
             cd projects/book_store-PHP-MySQL;ls -l;
             echo "Hello, world!";
             pwd;
-            git pull origin dev_branc_ubuntu
+            sudo git pull origin dev_branc_ubuntu
         """
     }
     stages {
