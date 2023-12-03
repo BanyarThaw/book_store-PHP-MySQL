@@ -17,7 +17,7 @@ pipeline {
             steps {
                 sshagent(credentials: ['awslightsail']) {
                     sh '''
-                        ssh -o StrictHostKeyChecking=no ubuntu@54.255.246.163 $remoteCommands
+                        ssh -o StrictHostKeyChecking=no ubuntu@54.255.246.163 whoami
                     '''
                 }
             }
@@ -31,26 +31,12 @@ pipeline {
                 '''
             }
         }   
-        // stage("Testing") {
-        //     steps {
-        //         sh '''
-        //             pwd
-        //         '''
-        //     }
-        // }
-        stage("Go to project directory") {
+        stage("Go to project directory and pull the git branch") {
             steps {
                 sshagent(credentials: ['awslightsail']) {
-                    sh 'ssh -o StrictHostKeyChecking=no ubuntu@54.255.246.163'
+                    sh 'ssh -o StrictHostKeyChecking=no ubuntu@54.255.246.163 $remoteCommands'
                 }
             }
         }
-        // stage("Git pull branch") {
-        //     steps {
-        //         sh '''
-        //             git pull origin main
-        //         '''
-        //     }
-        // }
     }
 }
